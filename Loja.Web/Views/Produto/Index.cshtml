@@ -1,0 +1,22 @@
+﻿@model List<ProdutoViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<a href="/Home/index">Voltar</a>
+<div class="text-center">terqfs Produto
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<ul>
+    @foreach(var produto in Model)
+    {
+        <li>
+            @produto.Nome
+            <a href="/Produto/Save?id=1">Save</a>
+        </li>
+    }
+</ul>
